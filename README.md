@@ -17,16 +17,19 @@ const HtmlWebpackAlterPlugin = require('html-webpack-alter-plugin');
 module.exports = {
   plugins: [
     new HtmlWebpackPlugin(),
-    new HtmlWebpackAlterPlugin([
-      {
-        type: 'script',
-        data: 'window.__MY_GLOBAL__={ name: "xiao ming", age: 18 };',
-      },
-      {
-        type: 'style',
-        data: '.red-text { color: red; }',
-      }
-    ]),
+    new HtmlWebpackAlterPlugin({
+      position: 'head',
+      content: [
+        {
+          type: 'script',
+          data: 'window.__MY_GLOBAL__={ name: "xiao ming", age: 18 };',
+        },
+        {
+          type: 'style',
+          data: '.red-text { color: red; }',
+        }
+      ]
+    }),
   ],
 };
 ```
@@ -46,3 +49,10 @@ module.exports = {
   </body>
 </html>
 ```
+
+## Options
+
+| option | type | value |
+| ---- | ---- | --- |
+| position | string | 'head'/'body' |
+| content | array | { type: 'script'/'style', data } |

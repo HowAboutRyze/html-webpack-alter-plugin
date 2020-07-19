@@ -1,6 +1,6 @@
 {
   "name": "html-webpack-alter-plugin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A plugin can alter the template when used html-webpack-plugin",
   "main": "index.js",
   "scripts": {

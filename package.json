@@ -1,7 +1,7 @@
 {
   "name": "html-webpack-alter-plugin",
-  "version": "0.0.4",
-  "description": "A plugin can alter the template when used html-webpack-plugin",
+  "version": "0.0.5",
+  "description": "A plugin can alter the template when using html-webpack-plugin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
